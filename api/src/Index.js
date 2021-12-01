@@ -1,14 +1,16 @@
 const express = require("express")
 const morgan = require("morgan")
 const cors = require("cors")
-const connectionDB = require("./connectDB")
-
+const connectionDB = require("./config/connectDB")
+const main = require("../index2")
 
 
 require("dotenv").config()
 
 
 connectionDB()
+main()
+
 
 const app = express()
 const port = process.env.PORT || 5000
