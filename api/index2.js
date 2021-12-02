@@ -4,12 +4,12 @@ const Product = require("./src/models/products")
 
 async function main(){
     // const product = new Product({
-    //     name:"granola",
-    //     description :" hola",
-    //     price : 10,
-    //     stock: 2,
-    //     image: "https://cdn2.cocinadelirante.com/sites/default/files/images/2020/10/receta-de-granola-con-avena.jpg",
-    //     category: "frutos",
+    //     name:"leche de almendras",
+    //     description :"leche de almendras",
+    //     price : 30,
+    //     stock: 10,
+    //     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdyS25yGOYhoiQkqInuLA_drMsdeEvaFt-ug&usqp=CAU",
+    //     category: "aborrates",
 
     // })
     // const producteSaved = await product.save()
