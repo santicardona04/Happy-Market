@@ -10,7 +10,8 @@ const Product = require("../models/products.js")
 // app.get('/', function (req, res) {
     //   res.send('Hello World')
     // })
-    const getProducts = async (req, res, next) => {
+    // const getProducts = async (req, res, next) => {
+        app.get("/", async(req,res)=>{
         const { name } = req.query;
         try {
             if (name) {
@@ -32,6 +33,6 @@ const Product = require("../models/products.js")
         } catch (err) {
             return err;
         }
-    };
-    app.get('/', getProducts)
+    });
+    // app.get('/', getProducts)
     module.exports= app;
