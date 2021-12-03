@@ -27,9 +27,9 @@ app.use(express.json())
 //routes
 app.use('/',require('./routes/index.js'))
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+// app.get('/', function (req, res) {
+//   res.send('Hello World')
+// })
  
 app.listen(port,()=>{
     console.log(`server on ${port}`)
