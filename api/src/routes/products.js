@@ -42,27 +42,27 @@ const Product = require("../models/products.js")
         console.log('error :' , e)
     }
     }
-
-    const editProduct = async (req,res) => {
-        let id = req.params._id;
-        const producto = await Product.findById(id);
-        // res.render(`/edit_Product/:${id}`,producto)
-        res.send(producto)
-    }
-    const edit_Product= async (req,res) => {
-        let id = req.params;
-        const {name, description, price ,stock, image, category} = req.body
-        const edit_product = {
-            name, description, price ,stock, image, category
-        }
-        const producto = await  Product.updateOne({id:id} , edit_product)
-        try { producto.save() 
-            res.send('producto creado')}
-            catch(e){
-                console.log('error :' , e)
-            }
-        res.redirect('/')
-    }
+ // EDITAR PRODUCTO
+    // const editProduct = async (req,res) => {
+    //     let id = req.params._id;
+    //     const producto = await Product.findById(id);
+    //     // res.render(`/edit_Product/:${id}`,producto)
+    //     res.send(producto)
+    // }
+    // const edit_Product= async (req,res) => {
+    //     let id = req.params;
+    //     const {name, description, price ,stock, image, category} = req.body
+    //     const edit_product = {
+    //         name, description, price ,stock, image, category
+    //     }
+    //     const producto = await  Product.updateOne({id:id} , edit_product)
+    //     try { producto.save() 
+    //         res.send('producto creado')}
+    //         catch(e){
+    //             console.log('error :' , e)
+    //         }
+    //     res.redirect('/')
+    // }
 
     //ELIMINAR PRODUCTO
     const deleteProduct = async (req,res) => {
@@ -79,8 +79,8 @@ const Product = require("../models/products.js")
     app.post('/createProduct', createProduct)
 
     //editar productos
-    app.get('/editProduct/:_id', editProduct)
-    app.post('/edit_Product/:_id', edit_Product)
+    // app.get('/editProduct/:_id', editProduct)
+    // app.post('/edit_Product/:_id', edit_Product)
 
     //eliminar producto
     app.get('/deleteProduct/:_id', deleteProduct)
